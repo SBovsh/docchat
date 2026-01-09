@@ -11,8 +11,5 @@ def main():
         port=APP_CONFIG.app.app_port,
         access_log=False,
         log_config=LOGGING_CONFIG,
-        reload=APP_CONFIG.log.log_lvl == 10  # Включить reload только в DEBUG
+        reload=APP_CONFIG.log.log_lvl == 10
     )
-
-if __name__ == "__main__":
-    main()
