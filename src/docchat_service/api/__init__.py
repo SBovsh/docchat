@@ -1,4 +1,3 @@
-# src/docchat_service/api/__init__.py (ПОЛНАЯ ВЕРСИЯ)
 import contextlib
 import typing as tp
 
