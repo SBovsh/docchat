@@ -7,9 +7,7 @@ from fastapi import FastAPI
 from src.docchat_service.context import APP_CTX
 from .middleware import log_requests
 from .os_router import router as service_router
-# ИСПРАВЛЕНО: правильный импорт роутера
-from .v1.router import router as v1_router  # <-- КРИТИЧЕСКИ ВАЖНО: импортируем именно переменную router
-
+from .v1.router import router as v1_router
 @contextlib.asynccontextmanager
 async def lifespan(app: FastAPI) -> tp.AsyncGenerator[None, None]:
     await APP_CTX.on_startup()
